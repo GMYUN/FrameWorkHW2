@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div class="container mt-5">
+
+    <div class="d-flex justify-content-end mb-3">
+        <a class="btn btn-outline-secondary btn-sm" th:href="@{/products}">← 뒤로 가기</a>
+    </div>
+
+    <h2>관리자 페이지</h2>
+
+    <table class="table table-bordered mt-3">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Email</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="user : ${users}">
+            <td th:text="${user.id}">1</td>
+            <td th:text="${user.email}">email@example.com</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+</body>
+</html>
